@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { solutions } from "@/lib/site";
 
-const cats = ["All", "Enterprise", "Web", "Mobile", "Desktop", "Automation"] as const;
+const cats = ["All", "Business", "Industry", "Enterprise", "Web", "Mobile", "Desktop", "Automation"] as const;
+const catLabel: Record<string, string> = { Business: "Accounting & Inventory", Industry: "Construction & Interiors" };
 
 export default function SolutionsGrid() {
   const [cat, setCat] = useState<(typeof cats)[number]>("All");
@@ -20,7 +21,7 @@ export default function SolutionsGrid() {
             className={`chip${cat === c ? " is-active" : ""}`}
             onClick={() => setCat(c)}
           >
-            {c}
+            {catLabel[c] ?? c}
             <span className="chip-count">
               {c === "All" ? solutions.length : solutions.filter((s) => s.category === c).length}
             </span>
@@ -30,7 +31,7 @@ export default function SolutionsGrid() {
       <ul className="solutions-grid">
         {list.map((s, i) => (
           <li key={s.title} className="solution-card" style={{ animationDelay: `${i * 50}ms` }}>
-            <span className="solution-cat">{s.category}</span>
+            <span className="solution-cat">{catLabel[s.category] ?? s.category}</span>
             <h3>{s.title}</h3>
             <p>{s.text}</p>
             <div className="tags">

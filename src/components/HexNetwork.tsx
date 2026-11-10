@@ -47,17 +47,17 @@ export default function HexNetwork() {
           const b = pts[j];
           const d = Math.hypot(a.x - b.x, a.y - b.y);
           if (d < max) {
-            ctx.strokeStyle = `rgba(94,240,255,${0.16 * (1 - d / max)})`;
+            ctx.strokeStyle = `rgba(30,120,240,${0.14 * (1 - d / max)})`;
             ctx.lineWidth = 1;
             ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
           }
         }
         const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
         if (md < 180) {
-          ctx.strokeStyle = `rgba(94,240,255,${0.35 * (1 - md / 180)})`;
+          ctx.strokeStyle = `rgba(30,120,240,${0.3 * (1 - md / 180)})`;
           ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
         }
-        ctx.fillStyle = "rgba(94,240,255,0.7)";
+        ctx.fillStyle = "rgba(30,140,240,0.55)";
         ctx.beginPath(); ctx.arc(a.x, a.y, 1.6, 0, Math.PI * 2); ctx.fill();
       }
       if (!reduce) raf = requestAnimationFrame(draw);

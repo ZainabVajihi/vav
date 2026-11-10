@@ -20,6 +20,10 @@ const paths: Record<IconName, React.ReactNode> = {
   chat: (<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12Z" />),
   info: (<><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7.5v.5" /></>),
   flow: (<><rect x="3" y="3" width="6" height="6" rx="1.5" /><rect x="15" y="15" width="6" height="6" rx="1.5" /><path d="M6 9v3a3 3 0 0 0 3 3h6" /></>),
+  receipt: (<><path d="M5 3h14v18l-2.3-1.5L14.3 21 12 19.5 9.7 21l-2.4-1.5L5 21V3Z" /><path d="M9 8h6M9 12h6M9 16h3" /></>),
+  box: (<><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5v-9Z" /><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9" /></>),
+  crane: (<><path d="M5 21V4l-2 3M5 4h15M5 4l5 5M9 4v0M17 4v6" /><rect x="15" y="10" width="4" height="3" rx=".5" /><path d="M2.5 21h7" /></>),
+  sofa: (<><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3" /><path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3v-5Z" /><path d="M6 18v2M18 18v2" /></>),
   mail: (<><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3.5 6 8.5 7 8.5-7" /></>),
 };
 

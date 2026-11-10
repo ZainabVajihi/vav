@@ -11,7 +11,7 @@ export function LogoMark({ size = 40, className }: { size?: number; className?: 
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
       <defs>
         <linearGradient id={`g${id}`} x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#5EF0FF" />
+          <stop stopColor="#19C6F2" />
           <stop offset="1" stopColor="#1E6BFF" />
         </linearGradient>
       </defs>
@@ -30,7 +30,7 @@ export function LogoMark({ size = 40, className }: { size?: number; className?: 
         strokeLinejoin="round"
       />
       <path d="M27.6 34.5h8.8" stroke={`url(#g${id})`} strokeWidth="3.4" strokeLinecap="round" />
-      <circle cx="32" cy="21.5" r="2.6" fill="#5EF0FF" />
+      <circle cx="32" cy="21.5" r="2.6" fill="#19C6F2" />
     </svg>
   );
 }

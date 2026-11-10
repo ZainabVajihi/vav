@@ -47,7 +47,11 @@ export type IconName =
   | "chat"
   | "info"
   | "flow"
-  | "mail";
+  | "mail"
+  | "receipt"
+  | "box"
+  | "crane"
+  | "sofa";
 
 export const features: { icon: IconName; title: string; text: string }[] = [
   {
@@ -105,6 +109,22 @@ export const services: Service[] = [
     points: ["Role-based access & audit trails", "Multi-branch / multi-tenant", "Reporting & analytics", "Legacy system modernisation"],
   },
   {
+    id: "accounting",
+    icon: "receipt",
+    title: "Accounting & Billing Software",
+    summary:
+      "GST-ready invoicing, ledgers, payments and financial reports so your books stay accurate without the spreadsheet chaos.",
+    points: ["GST invoices & e-way bills", "Receivables & payables", "Expense & payment tracking", "P&L, balance sheet & tax reports"],
+  },
+  {
+    id: "inventory",
+    icon: "box",
+    title: "Inventory & Vendor Management",
+    summary:
+      "Know what you have, where it is and who supplies it, with live stock levels, purchase orders and vendor records in one place.",
+    points: ["Multi-site stock tracking", "Purchase orders & GRN", "Vendor onboarding & ratings", "Low-stock & payment alerts"],
+  },
+  {
     id: "web",
     icon: "globe",
     title: "Business Websites",
@@ -126,7 +146,7 @@ export const services: Service[] = [
     title: "Desktop Applications",
     summary:
       "Robust desktop software for Windows, macOS and Linux, ideal for billing counters, labs and shop floors.",
-    points: [".NET / Electron / Tauri", "Hardware & printer integration", "Local + cloud sync", "Auto-updates"],
+    points: [".NET / WPF / WinForms", "Hardware & printer integration", "Local + cloud sync", "Auto-updates"],
   },
   {
     id: "automation",
@@ -194,12 +214,20 @@ export const whyUs = [
 
 export const tech = [
   "Next.js", "React", "TypeScript", "Node.js", ".NET / C#", "Python", "Flutter", "React Native",
-  "Electron", "PostgreSQL", "SQL Server", "MySQL", "MongoDB", "AWS", "Azure", "Docker", "REST APIs", "Figma",
+  "PostgreSQL", "SQL Server", "MySQL", "MongoDB", "AWS", "Azure", "Docker", "REST APIs", "Figma",
 ];
 
-export type Solution = { title: string; category: "Enterprise" | "Web" | "Mobile" | "Desktop" | "Automation"; text: string; tags: string[] };
+export type Solution = { title: string; category: "Business" | "Industry" | "Enterprise" | "Web" | "Mobile" | "Desktop" | "Automation"; text: string; tags: string[] };
 
 export const solutions: Solution[] = [
+  { title: "Accounting & Billing Software", category: "Business", text: "GST invoicing, ledgers, receivables, payables and one-click financial reports for growing businesses.", tags: ["GST", "Invoicing", "Reports"] },
+  { title: "Inventory Management System", category: "Business", text: "Real-time stock across stores, warehouses and sites, with barcode support, reorder alerts and stock valuation.", tags: ["Stock", "Barcode", "Multi-site"] },
+  { title: "Vendor Management Portal", category: "Business", text: "Onboard suppliers, raise purchase orders, compare quotes, track deliveries and settle payments.", tags: ["Purchase orders", "Quotes", "Payments"] },
+  { title: "Construction Project Management", category: "Industry", text: "BOQ & estimates, site progress, material requests, labour attendance and subcontractor billing, from office to site.", tags: ["Construction", "BOQ", "Site app"] },
+  { title: "Construction Accounts & Materials", category: "Industry", text: "Project-wise costing, material consumption, running bills and vendor payments, so every site's profit is clear.", tags: ["Construction", "Costing", "Billing"] },
+  { title: "Interior Design Studio Software", category: "Industry", text: "Leads, site measurements, quotations with item libraries, client approvals, procurement and project timelines.", tags: ["Interiors", "Quotations", "Approvals"] },
+  { title: "Interior Firm Billing & Procurement", category: "Industry", text: "Track client payments by milestone, order materials from vendors and monitor margins on every project.", tags: ["Interiors", "Milestones", "Vendors"] },
+  { title: "Portfolio Website for Builders & Designers", category: "Web", text: "A showcase site for construction and interior firms, with project galleries, walkthroughs and enquiry forms.", tags: ["Portfolio", "Gallery", "Leads"] },
   { title: "ERP for Manufacturing", category: "Enterprise", text: "Inventory, purchase, production planning and accounts in one connected system.", tags: ["Inventory", "Reports", "Multi-branch"] },
   { title: "CRM & Sales Pipeline", category: "Enterprise", text: "Track leads, follow-ups and deals with automated reminders and dashboards.", tags: ["Leads", "Automation", "Analytics"] },
   { title: "HR & Payroll Suite", category: "Enterprise", text: "Attendance, leave, payroll and employee self-service with role-based access.", tags: ["Payroll", "Self-service"] },
@@ -220,4 +248,31 @@ export const faqs = [
   { q: "Will I own the source code?", a: "Yes. Once the project is paid for, the code, designs and documentation are yours." },
   { q: "Do you support the software after launch?", a: "Absolutely. We offer maintenance plans covering bug fixes, security updates, backups and new features." },
   { q: "Can you work with our existing system?", a: "Yes. We regularly integrate with, extend or modernise existing software, databases and third-party tools." },
+];
+
+export const industries: { icon: IconName; title: string; text: string; points: string[] }[] = [
+  {
+    icon: "crane",
+    title: "Construction firms",
+    text: "Run every site from one system, from estimates and materials to labour, vendors and running bills.",
+    points: ["BOQ & estimation", "Site progress & photos", "Material & labour tracking", "Subcontractor & vendor billing"],
+  },
+  {
+    icon: "sofa",
+    title: "Interior design firms",
+    text: "From the first site visit to final handover: quotations, approvals, procurement and payments in one place.",
+    points: ["Quotation builder & item library", "Client approvals & mood boards", "Procurement & vendor orders", "Milestone billing"],
+  },
+  {
+    icon: "box",
+    title: "Trading & retail",
+    text: "Billing, stock and supplier management that keeps counters fast and shelves full.",
+    points: ["POS & GST billing", "Inventory & reorders", "Supplier ledgers", "Sales analytics"],
+  },
+  {
+    icon: "building",
+    title: "Manufacturing & services",
+    text: "Connect purchase, production, sales and accounts so decisions are based on live numbers.",
+    points: ["Purchase & production", "Job / work orders", "Accounts integration", "Management dashboards"],
+  },
 ];
